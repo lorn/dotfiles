@@ -309,6 +309,9 @@ vim.opt.shiftwidth = 2    -- number of spaces to use for each step of indent.
 vim.opt.tabstop = 2       -- number of spaces a TAB counts for
 vim.opt.autoindent = true -- copy indent from current line when starting a new line
 vim.opt.wrap = true
+vim.bo.expandtab = true
+vim.bo.tabstop = 4
+vim.bo.shiftwidth = 4
 
 -- This comes first, because we have mappings that depend on leader
 -- With a map leader it's possible to do extra key combinations

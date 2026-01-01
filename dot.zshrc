@@ -75,7 +75,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(brew git asdf hacker-quotes)
+plugins=(brew git asdf hacker-quotes zoxide)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -111,4 +111,3 @@ typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
 fpath+=${ZDOTDIR:-~}/.zsh_functions
 
 
-. "/Users/lorn/.kube-profile"
