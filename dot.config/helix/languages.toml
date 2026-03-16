@@ -1,0 +1,44 @@
+[language-server.wakatime]
+command = "wakatime-ls"
+
+[[language]]
+name = "markdown"
+language-servers = ["marksman", "wakatime"]
+
+[[language]]
+name = "rust"
+language-servers = ["rust-analyzer", "wakatime"]
+
+[[language]]
+name = "nix"
+language-servers = ["nil", "wakatime"]
+
+[[language]]
+name = "python"
+scope = "source.python"
+injection-regex = "py(thon)?"
+file-types = ["py", "pyi", "py3", "pyw", "ptl", "rpy", "cpy", "ipy", "pyt", { glob = ".python_history" }, { glob = ".pythonstartup" }, { glob = ".pythonrc" }, { glob = "*SConstruct" }, { glob = "*SConscript" }, { glob = "*sconstruct" }]
+shebangs = ["python", "uv"]
+roots = ["pyproject.toml", "setup.py", "poetry.lock", "pyrightconfig.json"]
+comment-token = "#"
+language-servers = ["ty", "ruff", "jedi", "pylsp", "wakatime"]
+# TODO: pyls needs utf-8 offsets
+indent = { tab-width = 4, unit = "    " }
+
+[[language]]
+name = "javascript"
+scope = "source.js"
+injection-regex = "(js|javascript)"
+language-id = "javascript"
+file-types = ["js", "mjs", "cjs", "rules", "es6", "pac", { glob = ".node_repl_history" }, { glob = "jakefile" }]
+shebangs = ["node"]
+roots = [ "package.json", "jsconfig.json" ]
+comment-token = "//"
+block-comment-tokens = { start = "/*", end = "*/" }
+language-servers = [ "typescript-language-server", "wakatime" ]
+indent = { tab-width = 2, unit = "  " }
+
+
+
+# add as many entries as the number of the languages you use
+
