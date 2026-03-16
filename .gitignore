@@ -13,3 +13,5 @@ dot.config/pulse/
 dot.config/shortcutrc
 dot.config/user-dirs.dirs
 dot.config/user-dirs.locale
+dot.config/gcloud/
+dot.config/gh/
